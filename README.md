@@ -20,14 +20,40 @@ Point it at a backend codebase and it uses Claude to write API documentation in 
 npm install
 ```
 
-Set your API key from [console.anthropic.com](https://console.anthropic.com):
+Set your API key from [console.anthropic.com](https://console.anthropic.com). Each of these lasts for the current terminal session only.
+
+**macOS / Linux (bash, zsh):**
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-(PowerShell: `$env:ANTHROPIC_API_KEY = "sk-ant-..."`)
+**fish:**
 
+```fish
+set -x ANTHROPIC_API_KEY sk-ant-...
+```
+
+**Windows PowerShell:**
+
+```powershell
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+**Windows Command Prompt (cmd):**
+
+```bat
+set ANTHROPIC_API_KEY=sk-ant-...
+```
+
+To keep the key across sessions:
+
+| Platform | How |
+|---|---|
+| macOS (zsh, the default shell) | Add the `export` line to `~/.zshrc`, then run `source ~/.zshrc` |
+| Linux (bash) | Add the `export` line to `~/.bashrc`, then run `source ~/.bashrc` |
+| fish | Run `set -Ux ANTHROPIC_API_KEY sk-ant-...` once |
+| Windows | Run `setx ANTHROPIC_API_KEY "sk-ant-..."`, then open a new terminal |
 ## Usage
 
 ```bash
