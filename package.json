@@ -1,0 +1,31 @@
+{
+  "name": "api-doc-ai",
+  "version": "0.1.0",
+  "main": "dist/cli.js",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/cli.js",
+    "example": "tsx src/cli.ts examples/express-shop -o examples/express-shop/docs -t \"Shop API\""
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "Generate human-readable and AI-optimized API documentation from source code using Claude",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "bin": {
+    "api-doc-ai": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
